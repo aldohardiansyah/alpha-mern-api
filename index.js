@@ -1,11 +1,8 @@
-const express = require("express")
+const express = require("express");
 
-const app = express()
+const app = express();
+const productsRoutes = require("./src/routes/products");
 
-app.use(() => {
-    console.log("hello Server")
-    console.log("hello Server 1")
-    console.log("hello Server 2")
-})
+app.use("/", productsRoutes);
 
-app.listen(4000)
+app.listen(4000);
